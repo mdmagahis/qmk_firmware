@@ -1,7 +1,7 @@
 {
   "keyboard": "crkbd/rev1",
   "keymap": "mdmagahis",
-  "version": 0.1.3,
+  "version": 0.2.0,
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
