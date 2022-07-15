@@ -1,7 +1,7 @@
 {
   "keyboard": "crkbd/rev1",
   "keymap": "mdmagahis",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
@@ -15,7 +15,7 @@
       "KC_L",
       "KC_U",
       "KC_Y",
-      "KC_MINS",
+      "KC_QUOT",
       "KC_BSPC",
       "ALL_T(KC_ESC)",
       "HOME_A",
@@ -41,11 +41,11 @@
       "KC_DOT",
       "KC_SLSH",
       "KC_SCLN",
-      "LT(3, KC_TAB)",
+      "LT(3,KC_TAB)",
       "LT(2,KC_ESC)",
       "LT(1,KC_SPC)",
-      "LT(4, KC_BSPC)",
-      "LT(5,KC_DEL)",
+      "LT(4,KC_BSPC)",
+      "LT(5,KC_MINS)",
       "KC_ENT"
     ],
     [
@@ -89,7 +89,7 @@
       "KC_ESC",
       "KC_TRNS",
       "KC_BSPC",
-      "KC_DEL",
+      "KC_MINS",
       "KC_ENT"
     ],
     [
@@ -103,7 +103,7 @@
       "KC_7",
       "KC_8",
       "KC_9",
-      "KC_PMNS",
+      "KC_MINS",
       "KC_BSPC",
       "ALL_T(KC_ESC)",
       "KC_LCTL",
@@ -177,7 +177,7 @@
       "KC_ESC",
       "KC_SPC",
       "KC_BSPC",
-      "KC_DEL",
+      "KC_MINS",
       "KC_ENT"
     ],
     [
@@ -221,7 +221,7 @@
       "KC_ESC",
       "KC_SPC",
       "KC_TRNS",
-      "KC_DEL",
+      "KC_MINS",
       "KC_ENT"
     ],
     [
