@@ -21,9 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define HOME_R LALT_T(KC_R)
 #define HOME_S LGUI_T(KC_S)
 #define HOME_T LSFT_T(KC_T)
+#define HOME_Z LSFT_T(KC_Z)
 
 // Right-hand home row mods
 #define HOME_N RSFT_T(KC_N)
+#define HOME_SL RSFT_T(KC_SLSH)
 #define HOME_E RGUI_T(KC_E)
 #define HOME_I LALT_T(KC_I)
 #define HOME_O RCTL_T(KC_O)
@@ -82,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------------+--------+--------+--------+--------+--------|                 |--------+-------+--------+--------+--------+---------------|
       ALL_T(KC_ESC),  HOME_A,  HOME_R,  HOME_S,  HOME_T,    KC_G,                      KC_M, HOME_N,  HOME_E,  HOME_I,  HOME_O, ALL_T(KC_QUOT),
   //|--------------+--------+--------+--------+--------+--------|                 |--------+-------+--------+--------+--------+---------------|
-            KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                      KC_K,   KC_H, KC_COMM, KC_DOT, KC_SLSH,         KC_SCLN,
+            KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                      KC_K,   KC_H, KC_COMM, KC_DOT,  KC_SLSH,        KC_SCLN,
   //|--------------+--------+--------+--------+--------+--------+-------|  |------+--------+-------+--------+--------+--------+---------------|
                             LT(3,KC_TAB), LT(2,KC_ESC), LT(1,KC_SPC),          LT(4,KC_BSPC), LT(5,KC_QUOT), KC_ENT
                                   //`-----------------------------------'  `----------------------------------'
@@ -104,15 +106,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // Numpad
   [2] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------------.              ,-------------------------------------------------------.
-       LGUI(KC_GRV), KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                 KC_CIRC,    KC_7,    KC_8,    KC_9, KC_MINS,  KC_BSPC,
-  //|--------------+--------+--------+--------+--------+--------|              |---------+--------+--------+--------+--------+---------|
-      ALL_T(KC_ESC), KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT,   KC_NO,                 KC_PEQL,    KC_4,    KC_5,    KC_6, KC_PPLS,   KC_GRV,
-  //|--------------+--------+--------+--------+--------+--------|              |---------+--------+--------+--------+--------+---------|
-            KC_LSFT,   U_UND,   U_CUT,   U_CPY,   U_PST,   U_RDO,                 KC_PDOT,    KC_1,    KC_2,    KC_3, KC_SLSH,  KC_PEQL,
-  //|--------------+--------+--------+--------+--------+--------+-----|  |-----+---------+--------+--------+--------+--------+---------|
-                                        KC_TAB, KC_TRNS,  KC_SPC,                 KC_BSPC,   KC_P0, KC_PDOT
-                                  //`---------------------------------'  `------------------------------------'
+  //,----------------------------------------------------------------.              ,-------------------------------------------------------.
+       LGUI(KC_GRV), KC_EXLM,   KC_AT, KC_HASH,  KC_DLR,      KC_PERC,                 KC_CIRC,    KC_7,    KC_8,    KC_9, KC_MINS,  KC_BSPC,
+  //|--------------+--------+--------+--------+--------+-------------|              |---------+--------+--------+--------+--------+---------|
+      ALL_T(KC_ESC), KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, LGUI(KC_GRV),                 KC_PEQL,    KC_4,    KC_5,    KC_6, KC_PPLS,   KC_GRV,
+  //|--------------+--------+--------+--------+--------+-------------|              |---------+--------+--------+--------+--------+---------|
+            KC_LSFT,   U_UND,   U_CUT,   U_CPY,   U_PST,        U_RDO,                 KC_COLN,    KC_1,    KC_2,    KC_3, KC_SLSH,  KC_PEQL,
+  //|--------------+--------+--------+--------+--------+-------------+-----|  |-----+---------+--------+--------+--------+--------+---------|
+                                        KC_TAB, KC_TRNS,       KC_SPC,                 KC_BSPC,   KC_P0, KC_PDOT
+                                  //`--------------------------------------'  `------------------------------------'
    ),
 
 // Keyboard settings, functions
