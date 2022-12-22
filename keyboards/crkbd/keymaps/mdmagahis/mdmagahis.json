@@ -1,7 +1,7 @@
 {
   "keyboard": "crkbd/rev1",
   "keymap": "mdmagahis",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
@@ -88,9 +88,9 @@
       "KC_TAB",
       "KC_ESC",
       "KC_TRNS",
-      "KC_BSPC",
-      "KC_QUOT",
-      "KC_ENT"
+      "RCS(KC_D)",
+      "RCS(KC_F)",
+      "RCS(KC_G)"
     ],
     [
       "LGUI(KC_GRV)",
