@@ -1,7 +1,7 @@
 {
   "keyboard": "crkbd/rev1",
   "keymap": "mdmagahis",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
@@ -13,7 +13,7 @@
       "KC_B",
       "KC_J",
       "KC_L",
-      "KC_O",
+      "KC_U",
       "KC_Y",
       "KC_MINS",
       "KC_BSPC",
@@ -27,7 +27,7 @@
       "HOME_N",
       "HOME_E",
       "HOME_I",
-      "HOME_U",
+      "HOME_O",
       "ALL_T(KC_QUOT)",
       "KC_LSFT",
       "KC_Z",
