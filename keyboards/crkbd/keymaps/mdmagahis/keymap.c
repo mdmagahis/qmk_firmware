@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Keyboard settings, functions
   [3] = LAYOUT_split_3x6_3(
   //,------------------------------------------------------------.              ,-----------------------------------------------|.
-              RESET,  RGB_TOG, DT_PRNT, DT_DOWN,   DT_UP,   KC_NO,                 KC_NO,  KC_F7,  KC_F8,  KC_F9,  KC_F10,  KC_NO,
+             QK_RBT,  RGB_TOG, DT_PRNT, DT_DOWN,   DT_UP,   KC_NO,                 KC_NO,  KC_F7,  KC_F8,  KC_F9,  KC_F10,  KC_NO,
   //|--------------+---------+--------+--------+--------+--------|              |-------+-------+-------+-------+--------+-------|
       ALL_T(KC_ESC),  RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI,                 KC_NO,  KC_F4,  KC_F5,  KC_F6,  KC_F11,  KC_NO,
   //|--------------+---------+--------+--------+--------+--------|              |-------+-------+-------+-------+--------+-------|

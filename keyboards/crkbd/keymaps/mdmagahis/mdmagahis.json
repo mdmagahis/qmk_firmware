@@ -1,7 +1,7 @@
 {
   "keyboard": "crkbd/rev1",
   "keymap": "mdmagahis",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
@@ -137,7 +137,7 @@
       "KC_PDOT"
     ],
     [
-      "RESET",
+      "QK_RBT",
       "RGB_TOG",
       "DT_PRNT",
       "DT_DOWN",
