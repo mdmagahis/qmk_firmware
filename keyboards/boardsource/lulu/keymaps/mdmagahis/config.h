@@ -19,11 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#define MASTER_LEFT
+#define MASTER_RIGHT
 
-#define IGNORE_MOD_TAP_INTERRUPT
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 #define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 160
+#define TAPPING_TERM 150
 
 // #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
 

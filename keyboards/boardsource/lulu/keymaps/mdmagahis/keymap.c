@@ -44,6 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define U_HSTF RGUI(KC_RBRC)
 
 #include QMK_KEYBOARD_H
+#include "oled.c"
 #include <stdio.h>
 
 enum layers {
@@ -96,10 +97,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | (ESC)|  (A) |  (R) |  (S) |  (T) |   G  |-------.    ,-------|   M  |  (N) |  (E) |  (I) |  (O) |  (') |
  * |------+------+------+------+------+------|  VOL  |    |  HIST |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |   ,  |   .  |   /  |   ;  |
- * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | (Tab)| (ESC)| /(Space)/       \(BkSP)\  |  (') | Enter| RGUI |
- *                   |      |      |      |/       /         \      \ |      |      |      |
- *                   `----------------------------'           '------''--------------------'
+ * `----------------------------------------/       /     \      \-----------------------------------------'
+ *                  | LAlt | (Tab)| (ESC)| /(Space)/       \(BkSP)\  |  (') | Enter| RGUI |
+ *                  |      |      |      |/       /         \      \ |      |      |      |
+ *                  `----------------------------'           '------''--------------------'
  */
 
   [_COLEMAK] = LAYOUT(
@@ -205,7 +206,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [_COLEMAK] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN)  },
+    [_COLEMAK] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_F1, KC_F2)  },
     [_MACROS] =  { ENCODER_CCW_CW(RGB_HUD, RGB_HUI),           ENCODER_CCW_CW(RGB_SAD, RGB_SAI)  },
     [_NUMPAD] =  { ENCODER_CCW_CW(RGB_VAD, RGB_VAI),           ENCODER_CCW_CW(RGB_SPD, RGB_SPI)  },
     [_ADJUST] =  { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD),          ENCODER_CCW_CW(RGB_SAD, RGB_SAI)  },
