@@ -19,13 +19,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#define MASTER_RIGHT
+#define MASTER_LEFT
 
-#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 #define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 150
+#define TAPPING_TERM 160
 
-// #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
+#define ENCODER_RESOLUTION 2
+
+#define OLED_BRIGHTNESS 128
 
 #ifdef RGB_MATRIX_ENABLE
 #    define RGB_MATRIX_KEYPRESSES // reacts to keypresses
