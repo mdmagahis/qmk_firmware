@@ -27,6 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODER_RESOLUTION 2
 
 #define OLED_BRIGHTNESS 128
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
 #ifdef RGB_MATRIX_ENABLE
 #    define RGB_MATRIX_KEYPRESSES // reacts to keypresses
