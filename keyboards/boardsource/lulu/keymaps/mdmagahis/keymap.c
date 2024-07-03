@@ -115,7 +115,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_COLEMAK] = LAYOUT(
   //,-----------------------------------------------------------.                 ,-----------------------------------------------------------.
-             KC_GRV,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,  KC_F7,   KC_F8,   KC_F9,  KC_F10,        KC_BSPC,
+            KC_MPLY,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,  KC_F7,   KC_F8,   KC_F9,  KC_F10,        KC_BSPC,
   //,-----------------------------------------------------------.                 ,-----------------------------------------------------------.
              KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,   KC_L,    KC_U,    KC_Y, KC_MINS,        KC_BSLS,
   //|--------------+--------+--------+--------+--------+--------|                 |--------+-------+--------+--------+--------+---------------|
@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------------+--------+--------+--------+--------+--------|                 |--------+-------+--------+--------+--------+---------------|
             KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, KC_MUTE,  KC_F12,    KC_K,   KC_H, KC_COMM, KC_DOT,  KC_SLSH,        KC_SCLN,
   //|--------------+--------+--------+--------+--------+--------+-------|  |------+--------+-------+--------+--------+--------+---------------|
-                    KC_LGUI, LT(3,KC_TAB), LT(2,KC_ESC), LT(1,KC_SPC),          LT(4,KC_BSPC), LT(5,KC_QUOT), KC_ENT, KC_RALT
+               LOPT(KC_ESC), LT(3,KC_TAB), LT(2,KC_ESC), LT(1,KC_SPC),          LT(4,KC_BSPC), LT(5,KC_QUOT), KC_ENT, RGUI(KC_BSLS)
                                   //`-----------------------------------'  `----------------------------------'
 
   ),
@@ -131,11 +131,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // L: Keyboard Maestro Macros | R: Magnet Macros
   [_MACROS] = LAYOUT(
   //,----------------------------------------------------------------------------.                 ,---------------------------------------------------------------------|.
-              KC_NO, HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
+            KC_MPLY, HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
-              KC_NO, HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
+            KC_MNXT, HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
-      ALL_T(KC_ESC),   HYPR(KC_M), HYPR(KC_R), HYPR(KC_S), HYPR(KC_T), HYPR(KC_G),                 LCA(KC_C), LCA(KC_LEFT), LCA(KC_DOWN), LCA(KC_RGHT), LCA(KC_ENT), KC_NO,
+            KC_MPRV,   HYPR(KC_M), HYPR(KC_R), HYPR(KC_S), HYPR(KC_T), HYPR(KC_G),                 LCA(KC_C), LCA(KC_LEFT), LCA(KC_DOWN), LCA(KC_RGHT), LCA(KC_ENT), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
               KC_NO,   HYPR(KC_N), HYPR(KC_Y), HYPR(KC_C), HYPR(KC_D), HYPR(KC_V), KC_MUTE, KC_F12,LCA(KC_J),    LCA(KC_D),    LCA(KC_F),    LCA(KC_G),   LCA(KC_K), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|------/   /------|--------+-------------+-------------+-------------+------------+------|
