@@ -102,11 +102,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |   `  |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  | F10  |BackSP|
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |   Q  |   W  |   F  |   P  |   B  |                    |   J  |   L  |   U  |   Y  |   -  |   \  |
+ * | Tab  |   Q  |   W  |   F  |   P  |   B  |                    |   J  |   L  |   U  |   Y  |   -  |  ⏭  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | (ESC)|  (A) |  (R) |  (S) |  (T) |   G  |-------.    ,-------|   M  |  (N) |  (E) |  (I) |  (O) |  (') |
+ * | (ESC)|  (A) |  (R) |  (S) |  (T) |   G  |-------.    ,-------|   M  |  (N) |  (E) |  (I) |  (O) | (⏯) |
  * |------+------+------+------+------+------|  VOL  |    |  HIST |------+------+------+------+------+------|
- * |LShift|   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |   ,  |   .  |   /  |   ;  |
+ * |LShift|   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |   ,  |   .  |   /  |  ⏮  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | (Tab)| (ESC)| /(Space)/       \(BkSP)\  |  (') | Enter| RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
@@ -115,13 +115,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_COLEMAK] = LAYOUT(
   //,-----------------------------------------------------------.                 ,-----------------------------------------------------------.
-            KC_MPLY,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,  KC_F7,   KC_F8,   KC_F9,  KC_F10,        KC_BSPC,
+             KC_GRV,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,  KC_F7,   KC_F8,   KC_F9,  KC_F10,        KC_BSPC,
   //,-----------------------------------------------------------.                 ,-----------------------------------------------------------.
-             KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,   KC_L,    KC_U,    KC_Y, KC_MINS,        KC_BSLS,
+             KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,   KC_L,    KC_U,    KC_Y, KC_MINS,        KC_MNXT,
   //|--------------+--------+--------+--------+--------+--------|                 |--------+-------+--------+--------+--------+---------------|
-      ALL_T(KC_ESC),  HOME_A,  HOME_R,  HOME_S,  HOME_T,    KC_G,                      KC_M, HOME_N,  HOME_E,  HOME_I,  HOME_O, ALL_T(KC_QUOT),
+      ALL_T(KC_ESC),  HOME_A,  HOME_R,  HOME_S,  HOME_T,    KC_G,                      KC_M, HOME_N,  HOME_E,  HOME_I,  HOME_O, ALL_T(KC_MPLY),
   //|--------------+--------+--------+--------+--------+--------|                 |--------+-------+--------+--------+--------+---------------|
-            KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, KC_MUTE,  KC_F12,    KC_K,   KC_H, KC_COMM, KC_DOT,  KC_SLSH,        KC_SCLN,
+            KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, KC_MUTE,  KC_F12,    KC_K,   KC_H, KC_COMM, KC_DOT,  KC_SLSH,        KC_MPRV,
   //|--------------+--------+--------+--------+--------+--------+-------|  |------+--------+-------+--------+--------+--------+---------------|
                LOPT(KC_ESC), LT(3,KC_TAB), LT(2,KC_ESC), LT(1,KC_SPC),          LT(4,KC_BSPC), LT(5,KC_QUOT), KC_ENT, RGUI(KC_BSLS)
                                   //`-----------------------------------'  `----------------------------------'
@@ -131,15 +131,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // L: Keyboard Maestro Macros | R: Magnet Macros
   [_MACROS] = LAYOUT(
   //,----------------------------------------------------------------------------.                 ,---------------------------------------------------------------------|.
-            KC_MPLY, HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
+       HYPR(KC_ESC), HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
-            KC_MNXT, HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
+         HYPR(KC_3), HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
-            KC_MPRV,   HYPR(KC_M), HYPR(KC_R), HYPR(KC_S), HYPR(KC_T), HYPR(KC_G),                 LCA(KC_C), LCA(KC_LEFT), LCA(KC_DOWN), LCA(KC_RGHT), LCA(KC_ENT), KC_NO,
+         HYPR(KC_2),   HYPR(KC_M), HYPR(KC_R), HYPR(KC_S), HYPR(KC_T), HYPR(KC_G),                 LCA(KC_C), LCA(KC_LEFT), LCA(KC_DOWN), LCA(KC_RGHT), LCA(KC_ENT), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
-              KC_NO,   HYPR(KC_N), HYPR(KC_Y), HYPR(KC_C), HYPR(KC_D), HYPR(KC_V), KC_MUTE, KC_F12,LCA(KC_J),    LCA(KC_D),    LCA(KC_F),    LCA(KC_G),   LCA(KC_K), KC_NO,
+         HYPR(KC_1),   HYPR(KC_N), HYPR(KC_Y), HYPR(KC_C), HYPR(KC_D), HYPR(KC_V), KC_MUTE, KC_F12,LCA(KC_J),    LCA(KC_D),    LCA(KC_F),    LCA(KC_G),   LCA(KC_K), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|------/   /------|--------+-------------+-------------+-------------+------------+------|
-                                                KC_LGUI, HYPR(KC_4), HYPR(KC_5), KC_TRNS,                 RCS(KC_D), RCS(KC_F), RCS(KC_G), KC_RALT
+                                                KC_LGUI, HYPR(KC_4), HYPR(KC_5), KC_TRNS,   RCS(KC_D), RCS(KC_F), RCS(KC_G), KC_RALT
                                                  //`------------------------------------'   `----------------------------------'
   ),
 
