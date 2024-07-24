@@ -80,11 +80,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------------.                 ,-----------------------------------------------------------.
-             KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,   KC_L,    KC_U,    KC_Y, KC_MINS,        KC_BSPC,
+             KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,   KC_L,    KC_U,    KC_Y, KC_MINS,        KC_MNXT,
   //|--------------+--------+--------+--------+--------+--------|                 |--------+-------+--------+--------+--------+---------------|
-      ALL_T(KC_ESC),  HOME_A,  HOME_R,  HOME_S,  HOME_T,    KC_G,                      KC_M, HOME_N,  HOME_E,  HOME_I,  HOME_O, ALL_T(KC_QUOT),
+      ALL_T(KC_ESC),  HOME_A,  HOME_R,  HOME_S,  HOME_T,    KC_G,                      KC_M, HOME_N,  HOME_E,  HOME_I,  HOME_O, ALL_T(KC_MPLY),
   //|--------------+--------+--------+--------+--------+--------|                 |--------+-------+--------+--------+--------+---------------|
-            KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                      KC_K,   KC_H, KC_COMM, KC_DOT,  KC_SLSH,        KC_SCLN,
+            KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                      KC_K,   KC_H, KC_COMM, KC_DOT,  KC_SLSH,        KC_MPRV,
   //|--------------+--------+--------+--------+--------+--------+-------|  |------+--------+-------+--------+--------+--------+---------------|
                             LT(3,KC_TAB), LT(2,KC_ESC), LT(1,KC_SPC),          LT(4,KC_BSPC), LT(5,KC_QUOT), KC_ENT
                                   //`-----------------------------------'  `----------------------------------'
@@ -94,11 +94,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // L: Keyboard Maestro Macros | R: Magnet Macros
   [1] = LAYOUT_split_3x6_3(
   //,----------------------------------------------------------------------------.                ,---------------------------------------------------------------------|.
-              KC_NO, HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
+         HYPR(KC_3), HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                |--------+-------------+-------------+-------------+------------+------|
-      ALL_T(KC_ESC),   HYPR(KC_M), HYPR(KC_R), HYPR(KC_S), HYPR(KC_T), HYPR(KC_G),                LCA(KC_C), LCA(KC_LEFT), LCA(KC_DOWN), LCA(KC_RGHT), LCA(KC_ENT), KC_NO,
+         HYPR(KC_2),   HYPR(KC_M), HYPR(KC_R), HYPR(KC_S), HYPR(KC_T), HYPR(KC_G),                LCA(KC_C), LCA(KC_LEFT), LCA(KC_DOWN), LCA(KC_RGHT), LCA(KC_ENT), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                |--------+-------------+-------------+-------------+------------+------|
-              KC_NO,   HYPR(KC_N), HYPR(KC_Y), HYPR(KC_C), HYPR(KC_D), HYPR(KC_V),                LCA(KC_J),    LCA(KC_D),    LCA(KC_F),    LCA(KC_G),   LCA(KC_K), KC_NO,
+         HYPR(KC_1),   HYPR(KC_N), HYPR(KC_Y), HYPR(KC_C), HYPR(KC_D), HYPR(KC_V),                LCA(KC_J),    LCA(KC_D),    LCA(KC_F),    LCA(KC_G),   LCA(KC_K), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|------/  /------|--------+-------------+-------------+-------------+------------+------|
                                                   HYPR(KC_5), HYPR(KC_4), KC_TRNS,                RCS(KC_D), RCS(KC_F), RCS(KC_G)
                                                  //`------------------------------------'  `----------------------------------'
