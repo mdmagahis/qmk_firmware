@@ -65,34 +65,34 @@ enum custom_keycodes {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case PARENS:
-        if (record->event.pressed) {
-            // when keycode PARENS is pressed
-            SEND_STRING("()"SS_TAP(X_LEFT));
-        }
-        return false;
-    case BRCKTS:
-        if (record->event.pressed) {
-            // when keycode BRCKTS is pressed
-            SEND_STRING("[]"SS_TAP(X_LEFT));
-        }
-        return false;
-    case CBRCKTS:
-        if (record->event.pressed) {
-            // when keycode CBRCKTS is pressed
-            SEND_STRING("{}"SS_TAP(X_LEFT));
-        }
-        return false;
-    case OLED:
-        if (record->event.pressed) {
-            if (is_oled_on()) {
-                oled_off();
-            } else {
-                oled_on();
+        case PARENS:
+            if (record->event.pressed) {
+                // when keycode PARENS is pressed
+                SEND_STRING("()"SS_TAP(X_LEFT));
             }
+            return false;
+        case BRCKTS:
+            if (record->event.pressed) {
+                // when keycode BRCKTS is pressed
+                SEND_STRING("[]"SS_TAP(X_LEFT));
+            }
+            return false;
+        case CBRCKTS:
+            if (record->event.pressed) {
+                // when keycode CBRCKTS is pressed
+                SEND_STRING("{}"SS_TAP(X_LEFT));
+            }
+            return false;
+        case OLED:
+            if (record->event.pressed) {
+                if (is_oled_on()) {
+                    oled_off();
+                } else {
+                    oled_on();
+                }
+            }
+            return false;
         }
-        return false;
-    }
     return true;
 };
 
@@ -150,11 +150,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------------+--------+--------+--------+--------+-------------|               |---------+--------+--------+--------+--------+---------|
        LGUI(KC_GRV), KC_EXLM,   KC_AT, KC_HASH,  KC_DLR,      KC_PERC,                  KC_CIRC,    KC_7,    KC_8,    KC_9, KC_MINS,  KC_BSPC,
   //|--------------+--------+--------+--------+--------+-------------|               |---------+--------+--------+--------+--------+---------|
-      ALL_T(KC_ESC), KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, LGUI(KC_GRV),                  KC_PEQL,    KC_4,    KC_5,    KC_6, KC_PPLS,   KC_GRV,
+      ALL_T(KC_ESC), KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, LGUI(KC_GRV),                   KC_EQL,    KC_4,    KC_5,    KC_6, KC_PPLS,   KC_GRV,
   //|--------------+--------+--------+--------+--------+-------------|               |---------+--------+--------+--------+--------+---------|
-            KC_LSFT,   U_UND,   U_CUT,   U_CPY,   U_PST,        U_RDO, KC_MUTE, KC_F12, KC_COLN,    KC_1,    KC_2,    KC_3, KC_SLSH,  KC_PEQL,
+            KC_LSFT, C(KC_Z), C(KC_X), C(KC_C), C(KC_V),        U_RDO, KC_MUTE, KC_F12, KC_COLN,    KC_1,    KC_2,    KC_3, KC_SLSH,  KC_PEQL,
   //|--------------+--------+--------+--------+--------+-------------+-----|   |-----+---------+--------+--------+--------+--------+---------|
-                                     KC_LGUI, KC_TAB, KC_TRNS,       KC_SPC,            KC_BSPC,   KC_P0, KC_PDOT, KC_RALT
+                                     KC_LGUI, KC_TAB, KC_TRNS,       KC_SPC,            KC_BSPC,   KC_P0, KC_PDOT,  KC_NUM
                                   //`--------------------------------------'   `------------------------------------'
    ),
 
