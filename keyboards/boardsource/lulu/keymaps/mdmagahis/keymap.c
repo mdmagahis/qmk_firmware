@@ -63,6 +63,17 @@ enum custom_keycodes {
     OLED
 };
 
+bool os_specific_action(uint16_t keycode) {
+    switch (detected_host_os()) {
+        case OS_WINDOWS:
+            tap_code16(LCTL(keycode));
+            return false;
+        default:
+            return true;
+    }
+    return true;
+};
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case PARENS:
@@ -92,6 +103,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return false;
+        case U_UND:
+            if (record->event.pressed) {
+                return os_specific_action(KC_Z);
+            };
+        case U_CUT:
+            if (record->event.pressed) {
+                return os_specific_action(KC_X);
+            };
+        case U_CPY:
+            if (record->event.pressed) {
+                return os_specific_action(KC_C);
+            };
+        case U_PST:
+            if (record->event.pressed) {
+                return os_specific_action(KC_V);
+            };
+        case U_RDO:
+            if (record->event.pressed) {
+                return os_specific_action(KC_Y);
+            };
         }
     return true;
 };
@@ -152,7 +183,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------------+--------+--------+--------+--------+-------------|               |---------+--------+--------+--------+--------+---------|
       ALL_T(KC_ESC), KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, LGUI(KC_GRV),                   KC_EQL,    KC_4,    KC_5,    KC_6, KC_PPLS,   KC_GRV,
   //|--------------+--------+--------+--------+--------+-------------|               |---------+--------+--------+--------+--------+---------|
-            KC_LSFT, C(KC_Z), C(KC_X), C(KC_C), C(KC_V),        U_RDO, KC_MUTE, KC_F12, KC_COLN,    KC_1,    KC_2,    KC_3, KC_SLSH,  KC_PEQL,
+            KC_LSFT,   U_UND,   U_CUT,   U_CPY,   U_PST,        U_RDO, KC_MUTE, KC_F12, KC_COLN,    KC_1,    KC_2,    KC_3, KC_SLSH,  KC_PEQL,
   //|--------------+--------+--------+--------+--------+-------------+-----|   |-----+---------+--------+--------+--------+--------+---------|
                                      KC_LGUI, KC_TAB, KC_TRNS,       KC_SPC,            KC_BSPC,   KC_P0, KC_PDOT,  KC_NUM
                                   //`--------------------------------------'   `------------------------------------'
