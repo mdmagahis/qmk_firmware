@@ -164,9 +164,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,----------------------------------------------------------------------------.                 ,---------------------------------------------------------------------|.
        HYPR(KC_ESC), HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
-         HYPR(KC_3), HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),   LCA(KC_UP),    LCA(KC_T),   LCA(KC_I), KC_NO,
+         HYPR(KC_3), HYPR(KC_TAB), HYPR(KC_Z), HYPR(KC_A), HYPR(KC_Q), HYPR(KC_B),                 LCA(KC_U),    LCA(KC_E),    LCA(KC_J),    LCA(KC_T),   LCA(KC_I), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
-         HYPR(KC_2),   HYPR(KC_M), HYPR(KC_R), HYPR(KC_S), HYPR(KC_T), HYPR(KC_G),                 LCA(KC_C), LCA(KC_LEFT), LCA(KC_DOWN), LCA(KC_RGHT), LCA(KC_ENT), KC_NO,
+         HYPR(KC_2),   HYPR(KC_M), HYPR(KC_R), HYPR(KC_S), HYPR(KC_T), HYPR(KC_G),                 LCA(KC_C),    LCA(KC_H),    LCA(KC_K),    LCA(KC_L), LCA(KC_ENT), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|                 |--------+-------------+-------------+-------------+------------+------|
          HYPR(KC_1),   HYPR(KC_N), HYPR(KC_Y), HYPR(KC_C), HYPR(KC_D), HYPR(KC_V), KC_MUTE, KC_F12,LCA(KC_J),    LCA(KC_D),    LCA(KC_F),    LCA(KC_G),   LCA(KC_K), KC_NO,
   //|--------------+-------------+-----------+-----------+-----------+-----------|------/   /------|--------+-------------+-------------+-------------+------------+------|
